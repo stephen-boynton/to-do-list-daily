@@ -2,12 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
     <title>ToDoYou</title>
   </head>
   <body>
-    <form class="form" action="index.html" method="post">
+    <h1>The Ultimate TO-D0!</h1>
+    <form class="form" action="/new" method="POST">
       <input type="text" name="todo" value="" placeholder="Add a to do...">
-      <button type="submit" name="button"></button>
+      <button type="submit" name="button">Add Item</button>
     </form>
+    <div class="new-list">
+      <div class="text"><h2>Your To-Do List</h2>
+      <h6>Click the item to mark complete.</h6></div>
+      {{#list}}
+      <div class='todo-item' data-id="{{id}}">{{todo}}</div></a>
+      {{/list}}
+      {{^list}}
+      <p>Add new list items!</p>
+      {{/list}}
+    </div>
+    <div class="old-list">
+      <h2>Your Completed Tasks</h2>
+      {{#old}}
+      <div class="comp-item">{{todo}}</div>
+      {{/old}}
+      {{^old}}
+      <p>Complete some items!</p>
+      {{/old}}
+    </div>
+    <script src="/script.js" charset="utf-8"></script>
   </body>
 </html>

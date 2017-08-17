@@ -1,3 +1,4 @@
+const fs = require("fs");
 const list = require("./data");
 const old = require("./completed");
 
@@ -16,6 +17,7 @@ function newToDo(item) {
 		todo: item
 	});
 	console.log("Successfully added " + item);
+	fs.writeFileSync("data.js", "module.exports =" + JSON.stringify(list));
 	return list;
 }
 
@@ -36,7 +38,9 @@ function completeItem(id) {
 		id: count,
 		todo: item.todo
 	});
+	fs.writeFileSync("completed.js", "module.exports =" + JSON.stringify(old));
 	list.splice(index - 1, 1);
+	fs.writeFileSync("data.js", "module.exports =" + JSON.stringify(list));
 	console.log(list);
 }
 

@@ -1,82 +1,40 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
 body {
+	padding: 15px;
+	margin: 0;
+	box-sizing: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 150vh;
-}
-
-h1 {
-	margin: 20px;
-}
-
-h6 {
-	margin-bottom: 20px;
-}
-
-.new-list,
-.old-list {
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
-	align-items: center;
-	width: 50%;
-	margin: 25px 0;
-	padding: 20px;
-	border: 2px inset PowderBlue;
-	font-size: 12px;
-}
-
-.text {
-	width: 100%;
-	text-align: center;
-}
-
-form {
-	width: 100%;
-	display: flex;
-	justify-content: center;
 }
 
 input {
-	height: 30px;
-	width: 30%;
+	height: 25px;
+	width: 200px;
 }
 
-.todo-item {
-	cursor: pointer;
-	background-color: PowderBlue;
+button {
+	height: 32px;
+	width: 100px;
+}
+
+.text {
 	text-align: center;
-	margin: 10px 0;
-	padding: 10px;
-	border-radius: 20px;
-	color: black;
-	border: none;
 }
 
-.todo-item:hover {
-	background-color: lightblue;
-}
-
-.comp-item {
-	cursor: default;
-	width: 30%;
-	background-color: pink;
-	text-align: center;
-	margin: 10px 0;
-	padding: 10px;
-	border-radius: 20px;
-	color: black;
+.new-list {
+	width: 70%;
 }
 
 .complete-btn {
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
-	align-items: center;
+}
+
+.todo-item {
+	border: none;
+	padding: 5px;
+	background-color: #a4ddad;
+	margin: 5px;
+	display: flex;
+	flex-grow: 1;
 }

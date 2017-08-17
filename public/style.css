@@ -22,14 +22,14 @@ h6 {
 .new-list,
 .old-list {
 	display: flex;
+	flex-grow: 1;
 	flex-direction: column;
-	flex-wrap: wrap;
 	align-items: center;
 	width: 50%;
-	margin: 25px;
+	margin: 25px 0;
 	padding: 20px;
 	border: 2px inset PowderBlue;
-	max-height: 500px;
+	font-size: 12px;
 }
 
 .text {
@@ -49,16 +49,22 @@ input {
 }
 
 .todo-item {
-	width: 30%;
+	cursor: pointer;
 	background-color: PowderBlue;
 	text-align: center;
 	margin: 10px 0;
 	padding: 10px;
 	border-radius: 20px;
 	color: black;
+	border: none;
+}
+
+.todo-item:hover {
+	background-color: lightblue;
 }
 
 .comp-item {
+	cursor: default;
 	width: 30%;
 	background-color: pink;
 	text-align: center;
@@ -66,4 +72,11 @@ input {
 	padding: 10px;
 	border-radius: 20px;
 	color: black;
+}
+
+.complete-btn {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
 }

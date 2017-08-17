@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/style.css">
-    <title>ToDoYou</title>
-  </head>
-  <body>
-    <h1>The Ultimate TO-D0!</h1>
-    <form class="form" action="/new" method="POST">
-      <input type="text" name="todo" value="" placeholder="Add a to do...">
-      <button type="submit" name="button">Add Item</button>
-    </form>
-    <div class="new-list">
-      <div class="text"><h2>Your To-Do List</h2>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  <title>ToDoYou</title>
+</head>
+
+<body>
+  <h1>The Ultimate TO-D0!</h1>
+  <form class="form" action="/new" method="POST">
+    <input type="text" name="todo" value="" placeholder="Add a to do...">
+    <button type="submit" name="button">Add Item</button>
+  </form>
+  <div class="new-list">
+    <div class="text">
+      <h2>Your To-Do List</h2>
       <h6>Click the item to mark complete.</h6></div>
+    <form class="complete-btn" action="" method="">
       {{#list}}
-      <div class='todo-item' data-id="{{id}}">{{todo}}</div></a>
+        <button type="submit" class='todo-item' data-id="{{id}}">{{todo}}</button>
       {{/list}}
       {{^list}}
       <p>Add new list items!</p>
       {{/list}}
-    </div>
-    <div class="old-list">
-      <h2>Your Completed Tasks</h2>
-      {{#old}}
+    </form>
+  </div>
+  <div class="old-list">
+    <h2>Your Completed Tasks</h2>
+    {{#old}}
       <div class="comp-item">{{todo}}</div>
-      {{/old}}
-      {{^old}}
-      <p>Complete some items!</p>
-      {{/old}}
-    </div>
-    <script src="/script.js" charset="utf-8"></script>
-  </body>
+    {{/old}}
+    {{^old}}
+    <p>Complete some items!</p>
+    {{/old}}
+  </div>
+  <script src="/script.js" charset="utf-8"></script>
+</body>
+
 </html>

@@ -31,16 +31,7 @@ app.delete("/:id", (req, res) => {
 	dal.completeItem(req.params.id);
 	const list = dal.getList();
 	const old = dal.getCompleted();
-	res.render(
-		"todo",
-		{
-			list: list,
-			old: old
-		},
-		() => {
-			res.redirect("/");
-		}
-	);
+	res.render("todo");
 });
 
 app.set("port", 3000);
